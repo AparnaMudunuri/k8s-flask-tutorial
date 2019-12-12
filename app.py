@@ -1,6 +1,6 @@
 from flask import Flask,render_template,request,redirect,url_for
 
-#import config
+import config
 
 app = Flask(__name__)
 
@@ -37,4 +37,4 @@ def my_form_post():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8080)
+    app.run(host="0.0.0.0", port=config.PORT, debug=config.DEBUG_MODE)
