@@ -25,7 +25,7 @@ def show_index(select_key):
 @app.route('/',methods=['POST','GET'])
 def my_form_post():
     select_key = 'none'
-    text = request.files['u']
+    text = request.form['u']
     url_key = text.lower()
     
     for each in url_dict:
